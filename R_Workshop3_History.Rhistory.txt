@@ -1,0 +1,135 @@
+?plot
+mtcars
+plot(mtcars$hp, mtcars$mpg)
+plot(mtcars, mtcars)
+title(main = "Fuel Economy vs. Power", sub = "Motor Trends - 1974", xlab = "Power (hp)", ylab = "Fuel Economy (mpg)")
+?par
+par()
+plot(mtcars$hp, mtcars$mpg,
+adj = 0,
+fg = "#DDDDDD",
+cex = 1.2,
+cex.axis = 0.9,
+cex.lab = 1.2,
+cex.main = 1.4,
+col.axis = "black",
+col.lab = "blue",
+col = "red",
+family = "sans",
+font = 2,
+las = 2,
+pch = 8,
+tck = 1,
+xlog = T,
+main = "Motor Trend - 1974",
+xlab = "Power (hp)",)
+plot(mtcars$hp, mtcars$mpg,
+adj = 0,
+fg = "#DDDDDD",
+cex = 1.2,
+cex.axis = 0.9,
+cex.lab = 1.2,
+cex.main = 1.4,
+col.axis = "black",
+col.lab = "blue",
+col = "red",
+family = "sans",
+font = 2,
+las = 2,
+pch = 8,
+tck = 1,
+xlog = T,
+main = "Motor Trend - 1974",
+xlab = "Power (hp)",
+ylab = "Fuel Economy (mpg)")
+plot(mtcars$hp, mtcars$mpg,
+col = "red",
+pch = 8,
+xlab = NA,
+ylab = NA,
+axes = FALSE)
+axis(
+side = 2,
+las = 2,
+cex = 1.2,
+col.axis = "red",
+col = "red",
+at = seq(from = 10, to 35, by = 5),
+xpd = TRUE)
+axis(
+side = 2,
+las = 2,
+cex = 1.2,
+col.axis = "red",
+col = "red",
+at = seq(from = 10, to = 35, by = 5),
+xpd = TRUE)
+axis(
+side = 1,
+las = 2,
+cex = 1.2,
+at = seq(from = 50, to = 350, by = 50),
+xpd = TRUE)
+mtext(
+"Fuel Economy (mpg)",
+side = 2,
+adj = 0,
+cex.lab = 1.2,
+col = "red",
+family = "sans",
+font = 2,
+line = 3)
+points(
+mtcars$hp,
+rnorm(32, mean = 25, sd = 5),
+lty = 0,
+col = "purple",
+pch = 12)
+?par
+par(mfrow = c(2,2))
+plot(mtcars$hp, mtcars$mpg)
+plot(mtcars$hp, mtcars$wt)
+plot(mtcars$hp, mtcars$cyl)
+plot(mtcars$hp, mtcars$qsec)
+par(mfrow = c(1,1))
+pairs(~hp + mpg + wt + cyl, data = mtcars, upper.panel = NULL)
+x <- 1:10
+a1 <- rnorm(10, mean = 2, sd = 0.5)
+a2 <- rnorm(10, mean = 2, sd = 0.5)
+a3 <- rnorm(10, mean = 2, sd = 0.5)
+b1 <- rnorm(10, mean = 10, sd = 1)
+b2 <- rnorm(10, mean = 10, sd = 1)
+b3 <- rnorm(10, mean = 10, sd = 1)
+y1 <- a1 * x + b1
+y2 <- a2 * x + b2
+y3 <- a3 * x + b3
+plot(x, y1, lty = 1, col = "red")
+lines(x, y1, lty = 1, col = "red")
+lines(x, y2, lty = 2, col = "blue")
+lines(x, y3, lty = 3, col = "purple")
+y.mat <- matrix(c(y1, y2, y3), nrow = 3, ncol = 10, byrow = TRUE)
+y.mat
+y.mean <- colMeans(y.mat)
+lines(x, y.mean, lty = 1, lwd = 2, col = "black")
+barplot(y.mean, names.arg = x, col = "red", ylim = c(0,40), border = "red", las = 1)
+boxplot(iris$Sepal.Length)
+iris
+boxplot(
+data = iris,
+Sepal.Length ~ Species,
+col = "red",
+xlab = "Species",
+ylab = "Sepal.Length (cm)")
+library("gplots", lib.loc="~/R/win-library/3.2")
+library("ggplot2", lib.loc="~/R/win-library/3.2")
+qplot(factor(Species), Sepal.Length, Petal.Length, data = iris, geom = "boxplot", col = Species)
+qplot(factor(Species), Sepal.Length, Petal.Length, data = iris, geom = "boxplot", col = Species)
+qplot(Sepal.Length, Petal.Length, data = iris, col = Species, facets = ~ Species)
+library("RColorBrewer", lib.loc="~/R/win-library/3.2")
+palatte()
+pallate()
+palette()
+display.brewer.all()
+brewer.pal.info()
+brewer.pal.info
+
